@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Infographic và video YouTube</title>
+	<style>
+		:root {
+			--primary: #1f5f8b;
+			--secondary: #e8f3f8;
+			--text: #23313d;
+			--muted: #61717d;
+			--white: #ffffff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			color: var(--text);
+			background: #f4f7f9;
+			font-family: Arial, Helvetica, sans-serif;
+			line-height: 1.6;
+		}
+
+		.container {
+			width: min(100% - 32px, 1000px);
+			margin: 0 auto;
+		}
+
+		header {
+			padding: 56px 16px 48px;
+			color: var(--white);
+			text-align: center;
+			background: linear-gradient(135deg, #1f5f8b, #2d8497);
+		}
+
+		header h1 {
+			margin: 0 0 12px;
+			font-size: clamp(2rem, 5vw, 3.2rem);
+			line-height: 1.15;
+		}
+
+		header p {
+			max-width: 650px;
+			margin: 0 auto;
+			font-size: 1.05rem;
+		}
+
+		main {
+			padding: 40px 0 56px;
+		}
+
+		section {
+			margin-bottom: 32px;
+			padding: 28px;
+			background: var(--white);
+			border: 1px solid #dce6eb;
+			border-radius: 8px;
+			box-shadow: 0 4px 14px rgba(31, 63, 82, 0.06);
+		}
+
+		h2 {
+			margin: 0 0 8px;
+			color: var(--primary);
+			font-size: 1.55rem;
+		}
+
+		.section-intro {
+			margin: 0 0 22px;
+			color: var(--muted);
+		}
+
+		.infographic {
+			display: block;
+			width: 100%;
+			height: auto;
+			border: 1px solid #dce6eb;
+			border-radius: 4px;
+		}
+
+		.video-frame {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			overflow: hidden;
+			background: #dfe9ee;
+			border-radius: 4px;
+		}
+
+		.video-frame iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+
+		.pdf-viewer {
+			width: 100%;
+			height: 600px;
+			border: 1px solid #dce6eb;
+			border-radius: 4px;
+		}
+
+		.pdf-link {
+			display: inline-block;
+			margin-top: 12px;
+			color: var(--primary);
+			font-weight: bold;
+		}
+
+		footer {
+			padding: 20px 16px;
+			color: var(--muted);
+			font-size: 0.9rem;
+			text-align: center;
+		}
+
+		@media (max-width: 600px) {
+			header {
+				padding: 40px 16px 36px;
+			}
+
+			main {
+				padding: 24px 0 32px;
+			}
+
+			section {
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Infographic và video học tập</h1>
+			<p>Trang tổng hợp nội dung trực quan giúp sinh viên dễ dàng theo dõi và ôn tập kiến thức của bài thực hành.</p>
+		</div>
+	</header>
+
+	<main class="container">
+		<section aria-labelledby="infographic-title">
+			<h2 id="infographic-title">Infographic</h2>
+			<p class="section-intro">Hình ảnh tóm tắt nội dung chính của bài học.</p>
+			<img class="infographic" src="Lab05_Ex2.1.png.png" alt="Infographic của bài thực hành Lab 05">
+		</section>
+
+		<section aria-labelledby="video-title">
+			<h2 id="video-title">Video YouTube</h2>
+			<p class="section-intro">Xem video để tìm hiểu thêm về chủ đề của bài thực hành.</p>
+			<div class="video-frame">
+				<iframe
+					src="https://www.youtube.com/embed/qX4A0V341FQ"
+					title="Video YouTube của bài thực hành"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</section>
+
+		<section aria-labelledby="pdf-title">
+			<h2 id="pdf-title">Tài liệu PDF</h2>
+			<p class="section-intro">Đọc tài liệu trực tiếp trên trang hoặc mở ở một tab mới.</p>
+			<iframe class="pdf-viewer" src="Lab05_Ex1.1.pdf" title="Tài liệu PDF Lab 05"></iframe>
+			<a class="pdf-link" href="Lab05_Ex1.1.pdf" target="_blank" rel="noopener">Mở tài liệu PDF ở tab mới</a>
+		</section>
+	</main>
+
+	<footer>Lab 05 | Bài thực hành HTML</footer>
+</body>
+</html>
